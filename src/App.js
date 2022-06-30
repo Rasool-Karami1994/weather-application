@@ -45,7 +45,7 @@ function App() {
             ) : (
               <WiCloudy />
             )}
-            {weatherData.main.temp}
+            {Math.round(weatherData.main.temp)}
             <span>&deg;C</span>
           </p>
 
@@ -63,7 +63,7 @@ function App() {
             <div>
               <MdOutlineVisibility className="icon" />
               <p>Visibility</p>
-              <p>{weatherData.visibility} Km</p>
+              <p>{weatherData.visibility / 1000} Km</p>
             </div>
           </div>
         </div>
